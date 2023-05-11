@@ -1,0 +1,8 @@
+django==3.2.6
+transformers
+sentencepiece
+rouge-score
+stanza
+underthesea
+PyPDF2==3.0.0
+pandas
