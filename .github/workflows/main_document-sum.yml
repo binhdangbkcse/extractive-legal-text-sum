@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'document-sum'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_118D81635A88495A84AEFD7097797676 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A704442F4CB14ECD85ABDF0ABEC12504 }}
