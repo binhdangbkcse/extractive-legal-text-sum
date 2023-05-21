@@ -201,8 +201,8 @@ def post_process(result):
 def summarization(req):
     if req.method == "POST":
         file = req.FILES.get("document")
-        final_dict = torch_load_all('../best-model') #tải model của mình về r gắn đường dẫn vào đây
-        with open('../best-model/config.json', 'r') as f:
+        final_dict = torch_load_all('best-model') #tải model của mình về r gắn đường dẫn vào đây
+        with open('best-model/config.json', 'r') as f:
           data = f.read()
           config = json.loads(data)
           config = json.loads(config)
@@ -212,7 +212,7 @@ def summarization(req):
                                   config['lstm_hidden'], config['device'], config['batch_size'],
                                   config['num_epochs'], config['warmup_steps'], config['gradient_accumulation_steps'],
                                   config['print_freq'], config['save_dir'])
-        config.bert_name = "../phobert-base"
+        config.bert_name = "phobert-base"
         config.device = 'cpu'
         bert = AutoModel.from_pretrained(config.bert_name)
         tokenizer = AutoTokenizer.from_pretrained(config.bert_name)
