@@ -34,7 +34,7 @@ from summarization.config import VietnewsConfig
 
 def word_compound(text):
   
-  with open("../phobert-base/tokenizer.json") as vocab: 
+  with open("phobert-base/tokenizer.json") as vocab: 
     vocab = json.load(vocab)["model"]["vocab"]
     keys = list(vocab.keys())
     new_keys =[]
